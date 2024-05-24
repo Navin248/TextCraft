@@ -1,22 +1,11 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-#This code is for demonstrate Navigation bar
-# def index(request) :
-#     return HttpResponse('''<h1>Navigation Bar</h1> <a href="https://www.codewithharry.com/videos/python-django-tutorials-hindi-6/"> Django Code With Harry</a> <br> <a href="https://www.facebook.com">Facebook</a> <br> <a href="https://www.google.com">Google</a> <br> <a href="https://www.flipkart.com">Flipkart</a> <br> <a href="https://www.news.com">News</a> ''')
-# def about(request):
-#     return HttpResponse("About Harry Bhai")
+
 def index(request):
     return render(request,'index3.html')
-    #this code is for pipeline
-    # return HttpResponse('''HOME
-    #                     <html> <body> 
-    #                     <a href="http://127.0.0.1:8000/removepunc"><span style="margin-left:20px"> <button>Remove Punc</button></span> </a> 
-    #                     <a href="http://127.0.0.1:8000/capatilizefirst"><span style="margin-left:20px"> <button>capatilizefirst</button></span> </a>
-    #                     <a href="http://127.0.0.1:8000/newlineremove"><span style="margin-left:20px"> <button>NewLine</button></span> </a>
-    #                     <a href="http://127.0.0.1:8000/spaceremove"><span style="margin-left:20px"> <button>spaceremove</button></span> </a>
-    #                     <a href="http://127.0.0.1:8000/charcount"><span style="margin-left:20px"> <button>charcount</button></span> </a>
-    #                     </body> </html>''')
+
+
 def analyze(request):
     djtext=request.GET.get('text','default')
     removepunc=request.GET.get('removepunc','off')
