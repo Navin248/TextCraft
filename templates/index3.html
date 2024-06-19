@@ -72,7 +72,7 @@
 
     {% comment %} Text area section {% endcomment %}
     <div class="container mt-4 mb-2">
-      <form action='/analyze' method='get'>
+      <form action='/analyze' method='POST'> {% csrf_token %}
         <label for="exampleFormControlTextarea1" class="form-label"
           ><strong>Write your text here.Let TextCarft do the magic</strong>
         </label>
@@ -86,19 +86,24 @@
               Remove Puncations
             </label>
             <br>
-            <input class="form-check-input" type="checkbox"  name="capatilize" id="flexCheckDefault2">
+            <input class="form-check-input" type="checkbox"  name="fullcaps" id="flexCheckDefault2">
             <label class="form-check-label" for="flexCheckDefault2">
               Capatilize
             </label>
             <br>
-            <input class="form-check-input" type="checkbox"  name="NewLineRemove" id="flexCheckDefault3">
+            <input class="form-check-input" type="checkbox"  name="newlineremover" id="flexCheckDefault3">
             <label class="form-check-label" for="flexCheckDefault3">
-              NewLineRemove
+              New Line Remove
+            </label>
+          <br>
+          <input class="form-check-input" type="checkbox"  name="extraspaceremover"              id="flexCheckDefault3">
+            <label class="form-check-label" for="flexCheckDefault3">
+              Extra space remover
             </label>
 <br>
-            <input class="form-check-input" type="checkbox"  name="charcount" id="flexCheckDefault4">
+            <input class="form-check-input" type="checkbox"  name="numberremover" id="flexCheckDefault4">
             <label class="form-check-label" for="flexCheckDefault4">
-              Character Count
+              Number remover
             </label>
 
             <br>
